@@ -14,9 +14,7 @@ import com.vaadin.flow.server.PWA;
 public class MainView extends VerticalLayout {
     public MainView() {
 
-        Button button = new Button("Click me",
-                e -> Notification.show("Hello Worlld!"));
-        add(button);
+        add(new ProductForm());
     }
 }
 
