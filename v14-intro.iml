@@ -3,6 +3,8 @@
   <component name="AdditionalModuleElements">
     <content url="file://$MODULE_DIR$" dumb="true">
       <sourceFolder url="file://$MODULE_DIR$/Vaadin14-Intro/exercises/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Vaadin14-Layouting/exercises/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Vaadin14-Layouting/solutions/src/main/java" isTestSource="false" />
     </content>
   </component>
 </module>
