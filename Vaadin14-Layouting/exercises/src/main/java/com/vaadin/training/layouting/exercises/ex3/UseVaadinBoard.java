@@ -1,5 +1,6 @@
 package com.vaadin.training.layouting.exercises.ex3;
 
+import com.vaadin.flow.component.board.Board;
 import com.vaadin.flow.component.charts.Chart;
 import com.vaadin.flow.component.charts.model.*;
 import com.vaadin.flow.component.html.Div;
@@ -14,9 +15,10 @@ public class UseVaadinBoard extends VerticalLayout {
 
     public UseVaadinBoard(){
         setSizeFull();
-        Div div = new Div();
-        div.setText("Replace me with a vaadin board");
-        add(div);
+        Board board =new Board();
+        board.addRow(getPieChart(),getFunnelChart());
+        board.addRow(getColumnChart());
+        add(board);
     }
 
     private Chart getColumnChart(){
