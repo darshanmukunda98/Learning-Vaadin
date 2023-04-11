@@ -5,6 +5,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Vaadin14-Intro/exercises/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Vaadin14-Layouting/exercises/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Vaadin14-Layouting/solutions/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Vaadin14-FormsAndDataBinding/exercises/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Vaadin14-FormsAndDataBinding/solutions/src/main/java" isTestSource="false" />
     </content>
   </component>
 </module>
