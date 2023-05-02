@@ -8,12 +8,16 @@ import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
+import com.vaadin.flow.router.BeforeEvent;
+import com.vaadin.flow.router.OptionalParameter;
+import com.vaadin.flow.router.Route;
 
 import java.util.Random;
-
+@Route("lottery")
 public class LotteryView extends Composite<VerticalLayout> implements HasComponents {
 
 	private final Div lotteryResult = new Div();
+	private final TextField numberInput = new TextField();
 
 	public LotteryView() {
 		add(new H2("Lottery View"));
@@ -25,9 +29,13 @@ public class LotteryView extends Composite<VerticalLayout> implements HasCompone
 		Button button = new Button("Try my luck!", e -> {
 			final String value = numberInput.getValue();
 			if (value != null && !value.isEmpty()) {
+				try {
 					final Integer number = Integer.parseInt(value);
 					validate(number);
 					updateContent(number);
+				}catch (final NumberFormatException ex){
+					lotteryResult.setText("Please input a valid number");
+				}
 			}
 		});
 		button.setEnabled(false);
@@ -61,6 +69,12 @@ public class LotteryView extends Composite<VerticalLayout> implements HasCompone
 			if(number<1 || number >10){
 				throw new InvalidValueExeption();
 			}
+		}
+	}
+	public void setParameter(BeforeEvent event, @OptionalParameter Integer parameter){
+		if(parameter!=null){
+			validate(parameter);
+			numberInput.setValue(String.valueOf(parameter));
 		}
 	}
 
